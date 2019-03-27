@@ -1,49 +1,121 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+	<title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h1>Burp Suite 101</h1>
+				<h3>A Web Security Tool Tutorial</h3>
+				<p>
+					<small>Created by <a href="https://github.com/Whamo12">Alejandro Saenz</a></small>
+				</p>
+			</section>
+			<section>
+				<section>
+					<h2>My Life Resume</h2>
+					Born and raised in Northern Virginia (NoVa). Graduated from the Virginia Commonwealth Unversity
+					School of Engineering with a degree in
+					Computer Science. A husband and father to a beautiful small family
+				</section>
+				<section>
+					<h2>Professional Life</h2>
+					<p> Worked as a software engineer and application security engineer. Currently works as a blend of
+						both.
+					</p>
+				</section>
+			</section>
+			<section>
+				<h2>Target Audience</h2>
+				<ul>
+					<li class="fragment">Web Application Developers</li>
+					<li class="fragment">Software Developers in Test</li>
+					<li class="fragment">Quality Assurance (QA) Testers</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Lesson Goals</h2>
+				<ul>
+					<li class="fragment">Application Security Crash Course</li>
+					<li class="fragment">OWASP Top 10</li>
+					<li class="fragment">Learn the basic fundamentals of Burp Suite Community</li>
+					<li class="fragment">Roll AppSec into workflow</li>
+					<li class="fragment">Think beyond the requirements</li>
+				</ul>
+			</section>
+			<section>
+				<h1>Reminder</h1>
+				<h2>This is a 101 course!</h2>
+			</section>
+			<section data-background="https://i.imgur.com/0UW1yhc.gif">
+				<h2>... Let's Begin</h2>
+			</section>
+			<section>
+				<section>
+					<h2>Application Security: A Basic Overview</h2>
+					<p>what is is, what it do</p>
+				</section>
+				<section>
+					<h2>Open Web Application Security Project (OWASP)</h2>
+					<p>what it is, what it do</p>
+				</section>
+				<section>
+					<h2>OWASP Top 10</h2>
+					<p>list and links</p>
+				</section>
+			</section>
+			<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
+				<h2>Prequisites</h2>
+				<li><a target="_blank" href="https://portswigger.net/burp/communitydownload">Download Burp Suite
+						Community Edition</a>
+				</li>
+				<li><a target="_blank" href="https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/">Foxy
+						Proxy</a></li>
+				<li><a target="_blank" href="https://juice-shop.herokuapp.com/#/">OWASP Juice Shop</a></li>
+			</section>
+			<section>
+				<section>
+					<h2>Setup: Burp Suite Community</h2>
+				</section>
+			</section>
 		</div>
+	</div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+	<script>
+		Reveal.initialize({
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+			]
+		});
+	</script>
+</body>
+
 </html>
