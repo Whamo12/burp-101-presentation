@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>reveal.js</title>
+	<title>Burp Suite 101</title>
 
 	<link rel="stylesheet" href="css/reveal.css">
 	<link rel="stylesheet" href="css/theme/black.css">
@@ -27,6 +27,8 @@
 	<div class="reveal">
 		<div class="slides">
 			<section>
+				<img width="200" height="200" style="border: 0px"
+					data-src="https://www.kali.org/wp-content/uploads/revslider/last/burpsuite.png">
 				<h1>Burp Suite 101</h1>
 				<h3>A Web Security Tool Tutorial</h3>
 				<p>
@@ -58,46 +60,115 @@
 			<section>
 				<h2>Lesson Goals</h2>
 				<ul>
-					<li class="fragment">Application Security Crash Course</li>
-					<li class="fragment">OWASP Top 10</li>
-					<li class="fragment">Learn the basic fundamentals of Burp Suite Community</li>
-					<li class="fragment">Roll AppSec into workflow</li>
-					<li class="fragment">Think beyond the requirements</li>
+					<li class="fragment">Application Security (AppSec) Crash Course</li>
+					<li class="fragment">Brief Overview of the OWASP Top 10</li>
+					<li class="fragment">Burp Suite Fundamentals</li>
+					<li class="fragment">AppSec Workflow Integration</li>
+					<li class="fragment">Hacker-Think</li>
 				</ul>
 			</section>
 			<section>
 				<h1>Reminder</h1>
-				<h2>This is a 101 course!</h2>
+				<h2><strong>This is a 101 course!</strong></h2>
+			</section>
+			<section data-transition="slide">
+				<h2>Prequisites</h2>
+				<li><a target="_blank" href="https://portswigger.net/burp/communitydownload">Burp Suite
+						Community Edition</a>
+				</li>
+				<li><a target="_blank" href="https://owasp-juice-shop-whamo12.herokuapp.com/#/">OWASP Juice Shop</a>
+				</li>
+			</section>
+			<section data-background="#FFA500">
+				<section>
+					<h2>Setup: Environment</h2>
+					<ol>
+						<li class="fragment"><a href="https://nodejs.org/en/download/">Install Node.js</a></li>
+						<li class="fragment"><a href="https://git-scm.com/downloads">Install Git</a></li>
+						<li class="fragment"><a href="https://github.com/Whamo12/juice-shop">Clone Juice Shop</a></li>
+						<li class="fragment" data-markdown>```cd juice-shop && npm install```</li>
+						<li class="fragment" data-markdown>```npm start```</li>
+					</ol>
+				</section>
+				<section>
+					<h3>Burp Suite Setup</h3>
+					<ol>
+						<li class="fragment"><a href="https://portswigger.net/burp/communitydownload">Download Burp
+								Suite Community</a>
+						</li>
+						<li class="fragment"><a download href="./burp.config.json">Download Burp Config</a></li>
+						<li class="fragment">Follow setup instructions</li>
+						<li class="fragment">Open Burp Suite Community</li>
+						<li class="fragment">Open Mozzila FireFox</li>
+						<li class="fragment">Go to preferences
+							<ul>
+								<li data-markdown>```about:preferences#general```</li>
+							</ul>
+						</li>
+					</ol>
+				</section>
+				<section>
+					<h3>Burp Suite Setup</h3>
+					<img style="height: 550px; width: 520px" src="./assets/Screen Shot 2019-03-31 at 11.37.44 AM.png">
+				</section>
 			</section>
 			<section data-background="https://i.imgur.com/0UW1yhc.gif">
 				<h2>... Let's Begin</h2>
 			</section>
-			<section>
+			<section data-background="#4d7e65" data-background-transition="zoom">
 				<section>
-					<h2>Application Security: A Basic Overview</h2>
-					<p>what is is, what it do</p>
+					<h2>AppSec: A Definition</h2>
+					<blockquote cite="https://en.wikipedia.org/wiki/Application_security">Application security
+						encompasses measures taken to improve the security of an
+						application often by finding, fixing ,and preventing security vulnerabilities. </blockquote>
 				</section>
 				<section>
-					<h2>Open Web Application Security Project (OWASP)</h2>
-					<p>what it is, what it do</p>
+					<h2>A Blue Team</h2>
+					<ul>
+						<li class="fragment">Research and Development on target technologies</li>
+						<li class="fragment">Performs analysis on web application to identify and help remediate
+							security flaws</li>
+						<li class="fragment">Communicate issues project owners</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Why can't we just use vulnerabilty scanners in our CI/CD?</h2>
+					<h3 class="fragment">The Human Element</h3>
+				</section>
+				<section>
+					<h2>The Master Plan</h2>
+					<ul>
+						<li></li>
+					</ul>
+				</section>
+				<section>
+					<h2>How does AppSec effect you</h2>
+					<p>cnn</p>
+				</section>
+			</section>
+			<section data-background="#4d7e65" data-background-transition="zoom">
+				<section>
+					<h2>The OWASP Foundation</h2>
+					<blockquote cite="https://en.wikipedia.org/wiki/Application_security">Application security
+						encompasses measures taken to improve the security of an
+						application often by finding, fixing ,and preventing security vulnerabilities. </blockquote>
 				</section>
 				<section>
 					<h2>OWASP Top 10</h2>
-					<p>list and links</p>
+					<p>generic discussion about what an AppSec team operates</p>
 				</section>
-			</section>
-			<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-				<h2>Prequisites</h2>
-				<li><a target="_blank" href="https://portswigger.net/burp/communitydownload">Download Burp Suite
-						Community Edition</a>
-				</li>
-				<li><a target="_blank" href="https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/">Foxy
-						Proxy</a></li>
-				<li><a target="_blank" href="https://juice-shop.herokuapp.com/#/">OWASP Juice Shop</a></li>
+				<section>
+					<h2>Juice Shop</h2>
+					<p>what does an appsec specifically do. SCA, Dynamic, Training, consulation</p>
+				</section>
 			</section>
 			<section>
 				<section>
-					<h2>Setup: Burp Suite Community</h2>
+					<h1>What is Burp Suite?</h1>
+				</section>
+				<section>
+					<h2>What is Burp Suite?</h2>
+					<p>http proxy tool that appsec use</p>
 				</section>
 			</section>
 		</div>
