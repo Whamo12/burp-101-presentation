@@ -106,12 +106,12 @@ module.exports = function(grunt) {
 		zip: {
 			bundle: {
 				src: [
-					'index.html',
-					'css/**',
-					'js/**',
-					'lib/**',
+					'public/index.html',
+					'public/css/**',
+					'public/js/**',
+					'public/lib/**',
 					'images/**',
-					'plugin/**',
+					'public/plugin/**',
 					'**.md'
 				],
 				dest: 'reveal-js-presentation.zip'
