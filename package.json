@@ -8,8 +8,7 @@
   "scripts": {
     "test": "grunt test",
     "start": "node server.js",
-    "build": "grunt",
-    "server": "node server.js"
+    "build": "grunt"
   },
   "author": {
     "name": "Hakim El Hattab",
