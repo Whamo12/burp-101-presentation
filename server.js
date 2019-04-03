@@ -21,10 +21,6 @@ app.set('etag', false);
 app.use(helmet({
 noCache: true
 }))
-// Catch all other routes and return the index file
-app.get('*', (req, res) => {
-res.sendFile(path.join(__dirname, '.public/index.html'))
-})
 
 /**
 * Get port from environment and store in Express.

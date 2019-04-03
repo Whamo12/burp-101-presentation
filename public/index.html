@@ -27,8 +27,7 @@
 	<div class="reveal">
 		<div class="slides">
 			<section>
-				<img width="200" height="200" style="border: 0px"
-					data-src="https://www.kali.org/wp-content/uploads/revslider/last/burpsuite.png">
+				<img width="200" height="200" style="border: 0px" data-src="./assets/burpsuite.png">
 				<h1>Burp Suite 101</h1>
 				<h3>A Web Security Tool Tutorial</h3>
 				<p>
@@ -44,9 +43,14 @@
 				</section>
 				<section>
 					<h2>Professional Life</h2>
-					<p> Worked as a software engineer and application security engineer. Currently works as a blend of
-						both.
-					</p>
+					<a target="_blank" href="https://www.alejandrosaenz.com">Career</a>
+					<p>Currently work both in the field of software engineering and application security, both
+						proprietary and open source</p>
+				</section>
+				<section>
+					<h2>...also a Photographer</h2>
+					<a target="_blank" href="https://www.saenzag.photos/">Checkout my portfolio built with Angular
+						7!</a>
 				</section>
 			</section>
 			<section>
@@ -83,9 +87,19 @@
 				<section>
 					<h2>Setup: Environment</h2>
 					<ol>
-						<li class="fragment"><a href="https://nodejs.org/en/download/">Install Node.js</a></li>
-						<li class="fragment"><a href="https://git-scm.com/downloads">Install Git</a></li>
-						<li class="fragment"><a href="https://github.com/Whamo12/juice-shop">Clone Juice Shop</a></li>
+						<li class="fragment"><a target="_blank" href="https://nodejs.org/en/download/">Install
+								Node.js</a></li>
+						<li class="fragment"><a target="_blank" href="https://git-scm.com/downloads">Install Git
+								(Optional)</a></li>
+						<li class="fragment">Get Juice Shop<ul>
+								<li class="fragment"><a href="https://github.com/Whamo12/juice-shop">Clone Juice Shop
+										(Requires Git)</a></li>
+								<li class="fragment"><a download
+										href="https://github.com/bkimminich/juice-shop/archive/master.zip">Download
+										Juice Shop</a></li>
+							</ul>
+						</li>
+
 						<li class="fragment" data-markdown>```cd juice-shop && npm install```</li>
 						<li class="fragment" data-markdown>```npm start```</li>
 					</ol>
@@ -93,12 +107,14 @@
 				<section>
 					<h3>Burp Suite Setup</h3>
 					<ol>
-						<li class="fragment"><a href="https://portswigger.net/burp/communitydownload">Download Burp
+						<li class="fragment"><a target="_blank"
+								href="https://portswigger.net/burp/communitydownload">Download Burp
 								Suite Community</a>
 						</li>
 						<li class="fragment"><a download href="./burp.config.json">Download Burp Config</a></li>
 						<li class="fragment">Follow setup instructions</li>
 						<li class="fragment">Open Burp Suite Community</li>
+						<li class="fragment">Import Config from step 2</li>
 						<li class="fragment">Open Mozzila FireFox</li>
 						<li class="fragment">Go to preferences
 							<ul>
@@ -110,6 +126,10 @@
 				<section>
 					<h3>Burp Suite Setup</h3>
 					<img style="height: 550px; width: 520px" src="./assets/Screen Shot 2019-03-31 at 11.37.44 AM.png">
+				</section>
+				<section>
+					<h3>Burp Suite Setup</h3>
+					<img src="./assets/Screen Shot 2019-04-02 at 9.24.04 PM.png">
 				</section>
 			</section>
 			<section data-background="https://i.imgur.com/0UW1yhc.gif">
@@ -127,39 +147,147 @@
 					<ul>
 						<li class="fragment">Research and Development on target technologies</li>
 						<li class="fragment">Performs analysis on web application to identify and help remediate
-							security flaws</li>
-						<li class="fragment">Communicate issues project owners</li>
+							security flaws
+							<ul>
+								<li class="fragment">Static Code Analysis</li>
+								<li class="fragment">Dynamic Testing</li>
+							</ul>
+						</li>
+						<li class="fragment">Report delivery (Boring but necessary)</li>
 					</ul>
 				</section>
 				<section>
 					<h2>Why can't we just use vulnerabilty scanners in our CI/CD?</h2>
+					</br>
 					<h3 class="fragment">The Human Element</h3>
+					<h3 class="fragment">...and also because...</h3>
+				</section>
+				<section data-background="https://media.giphy.com/media/q8pghZNgAQ0rm/giphy.gif">
+					<h2 style="color: orangered">false positives</h2>
 				</section>
 				<section>
-					<h2>The Master Plan</h2>
+					<h3>Eg, HP Fortify</h3>
+					<img src="./assets/fortify.png">
+				</section>
+				<section>
+					<h2>Static Code Analysis</h2>
 					<ul>
-						<li></li>
+						<li class="fragment">Drinking coffee and reading code</li>
+						<li class="fragment">Learning the architecture</li>
+						<li class="fragment">Researching frameworks and libraries used</li>
+						<li class="fragment">Bookmarking problem locations</li>
+						<li class="fragment">Timebox efficiency!</li>
+					</ul>
+
+				</section>
+				<section>
+					<h2>Dynamic Testing</h2>
+					<ul>
+						<li class="fragment">Using the application as a user would</li>
+						<li class="fragment">Mapping and spidering the application</li>
+						<li class="fragment">Investigate HTTP requests and responses</li>
+						<li class="fragment">How does the application handle errors</li>
+						<li class="fragment">Authentication/Authorization</li>
+						<li class="fragment">Attempt exploitation</li>
 					</ul>
 				</section>
 				<section>
-					<h2>How does AppSec effect you</h2>
-					<p>cnn</p>
+					<img src="./assets/effing_reporting.png">
+				</section>
+				<section>
+					<h2>Reporting</h2>
+					<ul>
+						<li class="fragment">Create a high-level vulnerabilty report</li>
+						<li class="fragment">Easy to read for the non-technical brain</li>
+						<li class="fragment">EVIDENCE! EVIDENCE! EVIDENCE!
+							<ul>
+								<li class="fragment">SCREENSHOTS! SCREENSHOTS!</li>
+								<li class="fragment">HTTP Requests/Responses</li>
+							</ul>
+						</li>
+						<li class="fragment">Problem locations
+							<ul>
+								<li class="fragment"> Dynamic Testing: URLS</li>
+								<li class="fragment"> SCA: relative paths and lines of code</li>
+							</ul>
+						</li>
+						<li class="fragment">Remediation examples</li>
+					</ul>
+				</section>
+				<section>
+					<h2>How does AppSec effect you?</h2>
+					</br>
+					<h3 class="fragment">Story time...</h3>
+				</section>
+				<section data-background="https://media.giphy.com/media/3o7bueVxlU3uSGP2b6/giphy.gif">
+					<img class="fragment" style="float: left; border: 0" class="fragment" src="./assets/dullah.png">
+					<h3 class="fragment" style="color: greenyellow">Hey man. Have you heard of the concept Champions and
+						Ninjas?
+					</h3>
+				</section>
+				<section>
+					<img style="border: 0" src="./assets/wait.png">
+				</section>
+				<section>
+					<img style="float: right; border: 0" src="./assets/stop.png">
+					<img style="float: left; border: 0" class="fragment" src="./assets/stop_hand.png">
+					<h3 class="fragment">What's that? lol</h3>
+				</section>
+				<section>
+					<h2>Hunters and Builders (Champions and Ninjas)</h2>
+					<ul>
+						<li>Hunters
+							<ul>
+								<li>Software Developers in Test && QA Testers (Manual)</li>
+								<li>Utilize and practice AppSec while delievering stories</li>
+								<li>Additionally, create security-focused test cases</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Hunters and Builders (Champions and Ninjas)</h2>
+					<ul>
+						<li>Warriors
+							<ul>
+								<li>Web Application Developers</li>
+								<li>Utilize and practice AppSec while delievering stories</li>
+								<li>Security focused design and development</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h1>TO BE CONTINUED...</h1>
 				</section>
 			</section>
-			<section data-background="#4d7e65" data-background-transition="zoom">
+			<section data-background="#4842f4" data-background-transition="zoom">
 				<section>
-					<h2>The OWASP Foundation</h2>
-					<blockquote cite="https://en.wikipedia.org/wiki/Application_security">Application security
-						encompasses measures taken to improve the security of an
-						application often by finding, fixing ,and preventing security vulnerabilities. </blockquote>
+					<h2><a target="_blank" mhref="https://www.owasp.org/index.php/Main_Page">The OWASP Foundation</a>
+					</h2>
+					<blockquote cite="https://en.wikipedia.org/wiki/OWASP">The Open Web Application Security Project
+						(OWASP) is an online community that produces freely-available articles, methodologies,
+						documentation, tools, and technologies in the field of web application security. </blockquote>
 				</section>
 				<section>
-					<h2>OWASP Top 10</h2>
-					<p>generic discussion about what an AppSec team operates</p>
+					<h2><a target="_blank" mhref="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project">The
+							OWASP Top 10
+							Project</a></h2>
+					<img style="border: 0" src="./assets/owasp_top_10.jpeg">
 				</section>
 				<section>
-					<h2>Juice Shop</h2>
-					<p>what does an appsec specifically do. SCA, Dynamic, Training, consulation</p>
+					<h2><a target="_blank" href="https://github.com/bkimminich/juice-shop"></a>Juice Shop</h2>
+					<blockquote>OWASP Juice Shop is probably the most modern and sophisticated insecure web application!
+						It can be used in security trainings, awareness demos, CTFs and as a guinea pig for security
+						tools! Juice Shop encompasses vulnerabilities from the entire OWASP Top Ten along with many
+						other security flaws found in real-world applications!</blockquote>
+				</section>
+				<section>
+					<h2><a target="_blank" href="https://github.com/bkimminich/juice-shop/pull/910">I'm also a
+							contributor!</a></h2>
+					<iframe class="fragment" src="https://giphy.com/embed/xT5LMEcHRXKXpIHCCI" width="480" height="362" frameBorder="0"
+						class="giphy-embed" allowFullScreen></iframe>
+					<p><a href="https://giphy.com/gifs/season-16-the-simpsons-16x15-xT5LMEcHRXKXpIHCCI"></a></p>
 				</section>
 			</section>
 			<section>
