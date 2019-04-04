@@ -66,8 +66,8 @@
 				<ul>
 					<li class="fragment">Application Security (AppSec) Crash Course</li>
 					<li class="fragment">Brief Overview of the OWASP Top 10</li>
-					<li class="fragment">Burp Suite Fundamentals</li>
 					<li class="fragment">AppSec Workflow Integration</li>
+					<li class="fragment">Burp Suite Fundamentals</li>
 					<li class="fragment">Hacker-Think</li>
 				</ul>
 			</section>
@@ -77,13 +77,12 @@
 			</section>
 			<section data-transition="slide">
 				<h2>Prerequisites</h2>
-				<li><a target="_blank" href="https://portswigger.net/burp/communitydownload">Burp Suite
-						Community Edition</a>
-				</li>
-				<li><a target="_blank" href="https://owasp-juice-shop-whamo12.herokuapp.com/#/">OWASP Juice Shop</a>
-				</li>
+				<ul>
+					<li><a target="_blank" href="https://portswigger.net/burp/communitydownload">Burp Suite Community Edition</a></li>
+					<li><a target="_blank" href="https://owasp-juice-shop-whamo12.herokuapp.com/#/">OWASP Juice Shop</a></li>
+				</ul>
 			</section>
-			<section data-background="#FFA500">
+			<section data-background="#666699">
 				<section>
 					<h2>Setup: Environment</h2>
 					<ol>
@@ -99,7 +98,7 @@
 										Juice Shop</a></li>
 							</ul>
 						</li>
-
+						<li class="fragment" data-markdown="">``` npm install --global --production windows-build-tools``` (For Windows Users Only!)</li>
 						<li class="fragment" data-markdown>```cd juice-shop && npm install```</li>
 						<li class="fragment" data-markdown>```npm start```</li>
 					</ol>
@@ -125,7 +124,7 @@
 				</section>
 				<section>
 					<h3>Burp Suite Setup</h3>
-					<img style="height: 550px; width: 520px" src="./assets/Screen Shot 2019-03-31 at 11.37.44 AM.png">
+					<img style="height: 550px; width: 520px" src="./assets/proxy_config.png">
 				</section>
 				<section>
 					<h3>Burp Suite Setup</h3>
@@ -140,7 +139,7 @@
 					<h2>AppSec: A Definition</h2>
 					<blockquote cite="https://en.wikipedia.org/wiki/Application_security">Application security
 						encompasses measures taken to improve the security of an
-						application often by finding, fixing ,and preventing security vulnerabilities. </blockquote>
+						application often by finding, fixing, and preventing security vulnerabilities. </blockquote>
 				</section>
 				<section>
 					<h2>A Blue Team</h2>
@@ -157,16 +156,16 @@
 					</ul>
 				</section>
 				<section>
-					<h2>Why can't we just use vulnerabilty scanners in our CI/CD?</h2>
+					<h2>Why can't we just rely on vulnerabilty scanners in our CI/CD?</h2>
 					</br>
 					<h3 class="fragment">The Human Element</h3>
 					<h3 class="fragment">...and also because...</h3>
 				</section>
 				<section data-background="https://media.giphy.com/media/q8pghZNgAQ0rm/giphy.gif">
-					<h2 style="color: orangered">false positives</h2>
+					<h2 style="color: orangered; vertical-align:text-top">false positives</h2>
 				</section>
 				<section>
-					<h3>Eg, HP Fortify</h3>
+					<h3>HP Fortify</h3>
 					<img src="./assets/fortify.png">
 				</section>
 				<section>
@@ -183,8 +182,8 @@
 				<section>
 					<h2>Dynamic Testing</h2>
 					<ul>
-						<li class="fragment">Using the application as a user would</li>
-						<li class="fragment">Mapping and spidering the application</li>
+						<li class="fragment">Become the User</li>
+						<li class="fragment">Mapping the application</li>
 						<li class="fragment">Investigate HTTP requests and responses</li>
 						<li class="fragment">How does the application handle errors</li>
 						<li class="fragment">Authentication/Authorization</li>
@@ -235,6 +234,10 @@
 				</section>
 				<section>
 					<h2>Hunters and Warriors (Champions and Ninjas)</h2>
+					<p>A concept where small application security teams use training as a tool to increase security awareness.</p>
+				</section>
+				<section>
+					<h2>Hunters and Warriors (Champions and Ninjas)</h2>
 					<ul>
 						<li>Hunters
 							<ul>
@@ -263,7 +266,7 @@
 			</section>
 			<section data-background="#4842f4" data-background-transition="zoom">
 				<section>
-					<h2><a target="_blank" mhref="https://www.owasp.org/index.php/Main_Page">The OWASP Foundation</a>
+					<h2><a target="_blank" href="https://www.owasp.org/index.php/Main_Page">The OWASP Foundation</a>
 					</h2>
 					<blockquote cite="https://en.wikipedia.org/wiki/OWASP">The Open Web Application Security Project
 						(OWASP) is an online community that produces freely-available articles, methodologies,
