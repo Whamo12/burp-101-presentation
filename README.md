@@ -1,2 +1,3 @@
 # burp-101-presentation
-A generic 101 presentation about Burp Suite Community focused
+
+A generic Burp 101 training course for developers, QA testers, and automation testers.
